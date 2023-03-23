@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JugadoresController;
 use App\Http\Controllers\TecnicosController;
 
+use App\Http\Controllers\EquiposController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,6 +20,13 @@ use App\Http\Controllers\TecnicosController;
 //jugadores
 Route::resource('jugador', JugadoresController::class); 
 Route::post('edit-foto/{id}', [JugadoresController::class, 'editarfoto']);
+
+
+//Equipos
+Route::resource('equipos', EquiposController::class); 
+Route::post('edit-foto-equipos/{id}', [EquiposController::class, 'editarfotoequipo']);
+
+
 
 //Tecnico
 Route::resource('tecnico', TecnicosController::class); 

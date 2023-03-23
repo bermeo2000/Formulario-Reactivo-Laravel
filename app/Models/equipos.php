@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class equipos extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $fillable = [
+        'nombre',
+        'foto',
+        'estado',
+    ];
 }
