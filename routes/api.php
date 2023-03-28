@@ -6,6 +6,7 @@ use App\Http\Controllers\JugadoresController;
 use App\Http\Controllers\TecnicosController;
 
 use App\Http\Controllers\EquiposController;
+use App\Http\Controllers\PresidentesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,8 @@ Route::post('edit-foto/{id}', [JugadoresController::class, 'editarfoto']);
 Route::resource('equipos', EquiposController::class); 
 Route::post('edit-foto-equipos/{id}', [EquiposController::class, 'editarfotoequipo']);
 
-
+// Presidentes 
+Route::resource('presidentes', PresidentesController::class); 
 
 //Tecnico
 Route::resource('tecnico', TecnicosController::class); 
